@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake clang git
+
+      - name: Configure
+        run: cmake --preset unix-debug
+        env:
+          CC: clang
+          CXX: clang++
+
+      - name: Build
+        run: cmake --build --preset unix-debug
+
+      - name: Test
+        run: ctest --preset unix-debug --output-on-failure

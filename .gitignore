@@ -1,0 +1,15 @@
+build/
+.cache/
+compile_commands.json
+.DS_Store
+
+# Generated images
+*.png
+
+# Local mirror of course guide
+docs/glassworks_guide/
+
+# Editor / user config
+.vscode/
+.idea/
+CMakeUserPresets.json
