@@ -29,12 +29,15 @@ target_include_directories(lodepng PUBLIC ${lodepng_SOURCE_DIR})
 add_library(raytracer_core
   src/math/vector.cpp
   src/colour/colour.cpp
+  src/material/material.cpp
   src/geometry/ray.cpp
   src/geometry/sphere.cpp
-  src/image/image.cpp
-  src/output/png_saver.cpp
+  src/geometry/plane.cpp
+  src/scene/scene.cpp
   src/render/camera.cpp
   src/render/trace.cpp
+  src/image/image.cpp
+  src/output/png_saver.cpp
 )
 target_include_directories(raytracer_core PUBLIC src)
 target_link_libraries(raytracer_core PRIVATE raytracer_warnings lodepng)

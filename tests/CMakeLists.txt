@@ -13,13 +13,16 @@ FetchContent_MakeAvailable(Catch2)
 add_executable(raytracer_tests
   test_helpers.cpp
   colour/test_colour.cpp
+  material/test_material.cpp
   geometry/test_ray.cpp
   geometry/test_sphere.cpp
-  image/test_image.cpp
+  geometry/test_plane.cpp
+  scene/test_scene.cpp
   math/test_vector.cpp
-  output/test_png_saver.cpp
   render/test_camera.cpp
   render/test_trace.cpp
+  image/test_image.cpp
+  output/test_png_saver.cpp
 )
 
 target_include_directories(raytracer_tests PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

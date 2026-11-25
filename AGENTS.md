@@ -35,7 +35,9 @@ src/
   main.cpp
   math/       vector.h, vector.cpp
   colour/     colour.h, colour.cpp
-  geometry/   ray.h, ray.cpp, sphere.h, sphere.cpp
+  material/   material.h, material.cpp
+  geometry/   hit.h, shape.h, ray.h, ray.cpp, sphere.h, sphere.cpp, plane.h, plane.cpp
+  scene/      scene.h, scene.cpp
   image/      image.h, image.cpp
   output/     image_saver.h, png_saver.h, png_saver.cpp
   render/     camera.h, camera.cpp, trace.h, trace.cpp
@@ -43,7 +45,9 @@ tests/
   test_helpers.h, test_helpers.cpp
   math/       test_vector.cpp
   colour/     test_colour.cpp
-  geometry/   test_ray.cpp, test_sphere.cpp
+  material/   test_material.cpp
+  geometry/   test_ray.cpp, test_sphere.cpp, test_plane.cpp
+  scene/      test_scene.cpp
   image/      test_image.cpp
   output/     test_png_saver.cpp
   render/     test_camera.cpp, test_trace.cpp
